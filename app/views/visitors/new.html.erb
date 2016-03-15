@@ -1,0 +1,37 @@
+<section class="visible-lg-block visible-md-block">
+  <div class="col-md-6 col-centered height-40">
+    <div class="well text-center">
+      <h1 class="white"><%= t('headline') %></h1>
+      <h3 class="mg-top-40 white"><%= t('sub_header') %></h3>
+      <%= simple_form_for @visitor, label_errors: true, html: { class: 'mg-top-20 mg-bt-40' } do |f| %>
+          <%= f.error_notification %>
+          <div class="input-group input-group-lg">
+            <%= f.input :email, label: false, placeholder: 'Enter your email to get updated', input_html: { class: 'input-text input-lg', 'aria-describedby' => 'sizing-addon1' } %>
+            <span class="input-group-btn" id="sizing-addon1"><%= f.button :submit, 'Submit', class: 'submit' %></span>
+          </div>
+      <% end %>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-10"><%= link_to (image_tag ('fb.png'), class: 'social-share'), 'https://jobonaut.de', target: '_blank' %></div>
+        <div class="col-md-1"><%= link_to (image_tag ('twitter.png'), class: 'social-share'), 'https://jobonaut.de', target: '_blank' %></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visible-xs-block visible-sm-block">
+  <div class="col-md-6 col-centered height-40">
+    <div class="well text-center">
+      <h1 class="white"><%= t('headline') %></h1>
+      <h3 class="mg-top-40 white"><%= t('sub_header') %></h3>
+      <%= simple_form_for @visitor, html: { class: 'mg-top-20 mg-bt-40' }, defaults: { input_html: { class: 'input-lg' } } do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :email, label: false, placeholder: 'Enter your email to get updated' %>
+          <span><%= f.button :submit, 'Submit', class: 'submit btn btn-default' %></span>
+      <% end %>
+      <div class="row">
+        <div class="col-xs-2 col-xs-offset-8"><%= link_to (image_tag ('fb.png'), class: 'social-share-xs'), 'https://example.com', target: '_blank' %></div>
+        <div class="col-xs-2"><%= link_to (image_tag ('twitter.png'), class: 'social-share-xs'), 'https://example.com', target: '_blank' %></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -15,5 +15,4 @@ class MailingListSignupJob < ActiveJob::Base
     })
     Rails.logger.info("Subscribed #{user.email} to MailChimp") if result
   end
-
 end

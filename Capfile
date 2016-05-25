@@ -19,6 +19,7 @@ require 'capistrano/ssh_doctor'
 require 'capistrano/secrets_yml'
 require 'capistrano/safe_deploy_to'
 require 'capistrano/unicorn_nginx'
+require 'capistrano/sudo'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }

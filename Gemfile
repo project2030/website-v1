@@ -28,7 +28,7 @@ group :development do
   gem 'capistrano-safe-deploy-to'
   gem 'capistrano-unicorn-nginx'
   gem 'capistrano-rails-console'
-  gem 'capistrano-sudo'
+  gem 'capistrano-sudo', require: false
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
